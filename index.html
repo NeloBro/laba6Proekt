@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>lab 6</title>
+    </head>
+    <body>
+        <input id="color"><button onclick="colorChange()">OK</button><br><br>
+        <input id="textColor"><button onclick="textColorChange()">OK</button><p id="text">Some Text</p></p>
+        <input id="linkText" value="http://"><button onclick="linkChange()">OK</button><br><br><a href="http://google.ru" target="_blank" id="link">Some Link</Link></a>
+        <script>
+            function colorChange() {
+                var color = document.getElementById("color");
+                document.body.style.background = color.value;
+            }
+            function textColorChange() {
+                var textColor = document.getElementById("textColor"),
+                    text = document.getElementById("text");
+                text.style.color = textColor.value;
+            }
+            function linkChange() {
+                var linkText = document.getElementById("linkText"),
+                    link = document.getElementById("link");
+                link.href = linkText.value;
+            }
+        </script>
+    </body>
+</html>
